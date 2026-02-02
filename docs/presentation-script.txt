@@ -1,0 +1,19 @@
+PROJECT: TWELVE – Frontend E-commerce Website
+
+แนวคิด:
+เว็บไซต์นี้เป็น Frontend ล้วน ออกแบบโดยเน้น UX และโครงสร้างไฟล์
+ใช้ธีม Netflix เพื่อรองรับ content-heavy และ horizontal scroll
+
+จุดเด่น:
+- แยก Header / Footer เพื่อ reuse
+- ใช้ CSS Variables เป็นค่ากลาง ลดการเขียนซ้ำ
+- UI consistency ทุกหน้า
+- Animation เบา ๆ ไม่กระทบ performance
+- พร้อมต่อ Backend / API ในอนาคต
+
+Tech:
+HTML / CSS / JavaScript (Vanilla)
+ไม่ใช้ Framework เพื่อแสดงพื้นฐานที่แข็งแรง
+
+Pages:
+Home / Products / Categories / Promotion / Reviews

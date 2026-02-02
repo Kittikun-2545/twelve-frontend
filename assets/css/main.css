@@ -1,0 +1,294 @@
+@import url('variables.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  background: var(--dark);
+  color: var(--white);
+}
+
+/* ================= HEADER ================= */
+header {
+  background: linear-gradient(90deg, var(--pink), var(--blue));
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+.nav a {
+  color: var(--white);
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.2)
+  );
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-content {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  z-index: 2;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+  color: #ffd6e8;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* ================= SECTION ================= */
+.section {
+  padding: 40px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* ================= PRODUCT GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  transition: transform .3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.price {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: var(--pink);
+  opacity: 0;
+  transition: .3s;
+}
+
+.product:hover .price {
+  opacity: 1;
+}
+
+/* ================= REVIEWS ================= */
+.reviews {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.review-card {
+  min-width: 250px;
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  scroll-snap-align: start;
+}
+
+.stars {
+  color: gold;
+  margin-bottom: 8px;
+}
+
+/* ================= NETFLIX ROW ================= */
+.row {
+  position: relative;
+}
+
+.row-items {
+  display: flex;
+  gap: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.row-card {
+  min-width: 220px;
+  background: var(--card);
+  padding: 16px;
+  border-radius: 12px;
+  transition: transform .3s;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  scroll-snap-align: start;
+}
+
+.row-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.row-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.row-card p {
+  font-size: 14px;
+}
+
+.row-card span {
+  color: var(--pink);
+  font-size: 13px;
+}
+
+.row-btn {
+  position: absolute;
+  top: 40%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.row-btn.left { left: -10px; }
+.row-btn.right { right: -10px; }
+
+/* ===== PRODUCT ACTION ===== */
+.product-action {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: .3s;
+  border-radius: 12px;
+}
+
+.product-action button {
+  background: var(--pink);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  transition: transform .2s ease, background .2s;
+}
+
+.product-action button:hover {
+  background: var(--blue);
+  transform: scale(1.05);
+}
+
+.row-card:hover .product-action {
+  opacity: 1;
+}
+
+/* ===== MODAL ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 300px;
+  width: 90%;
+  text-align: center;
+  animation: fadeUp .3s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.buy-btn {
+  margin-top: 10px;
+  background: var(--pink);
+  border: none;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  border-radius: 20px;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-content h2 {
+    font-size: 32px;
+  }
+}
