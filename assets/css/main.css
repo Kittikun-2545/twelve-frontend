@@ -176,9 +176,12 @@ header h1 {
 
 .row-card img {
   width: 100%;
+  aspect-ratio: 1 / 1;   /* ทำให้รูป 1 กับ 2 เท่ากัน */
+  object-fit: cover;    /* ครอปให้พอดีกรอบ */
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
 
 .row-card p {
   font-size: 14px;
