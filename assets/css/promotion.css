@@ -1,0 +1,96 @@
+/* ================= PROMOTION ================= */
+.promotion-section {
+  padding: 40px;
+}
+
+.promotion-section h2 {
+  margin-bottom: 20px;
+}
+
+/* ===== GRID ===== */
+.promotion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* ===== CARD ===== */
+.promo-card {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 14px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+
+  display: flex;          /* 🔴 สำคัญ */
+  flex-direction: column; /* 🔴 บังคับเรียงบน-ล่าง */
+  align-items: center;
+}
+
+
+.promo-card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== IMAGE ===== */
+.promo-card img {
+  width: 35%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===== NAME ===== */
+.promo-name {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* ===== PRICE ===== */
+.promo-price {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.new-price {
+  color: var(--pink);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ===== BUTTON ===== */
+.promo-btn {
+  width: 100%;
+  border: none;
+  background: var(--pink);
+  color: white;
+  padding: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.promo-btn:hover {
+  background: var(--blue);
+}
+
+/* ===== DISCOUNT BADGE ===== */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}

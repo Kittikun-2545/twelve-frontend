@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>TWELVE | Reviews</title>
   <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/review.css">
+
 </head>
 <body>
 
@@ -12,41 +14,84 @@
 <section class="section">
   <h2>⭐ รีวิวจากลูกค้า</h2>
 
-  <div class="reviews">
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      หอมมาก ใช้แล้วมั่นใจทั้งวัน  
-      <br><small>- ลูกค้าประจำ</small>
-    </div>
+<section class="reviews">
 
-    <div class="review-card">
-      <div class="stars">★★★★☆</div>
-      แพ็กเกจดูแพง เกินราคา  
-      <br><small>- คุณพลอย</small>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      ครีมซึมเร็ว ไม่เหนียว  
-      <br><small>- คุณออย</small>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      เสื้อผ้าคุณภาพดี ใส่สบาย  
-      <br><small>- คุณบาส</small>
-    </div>
-
-    <div class="review-card">
-      <div class="stars">★★★★☆</div>
-      ส่งไว แอดมินตอบเร็ว  
-      <br><small>- ลูกค้าใหม่</small>
+  <div class="review-card">
+    <img src="assets/images/profile/S__นุ๊ก.jpg"
+         class="review-avatar"
+         onclick="openImage(this.src)"
+         alt="profile">
+    <div class="review-content">
+      <h4>Anna</h4>
+      <p>กลิ่นหอมมาก ใช้แล้วมั่นใจขึ้น 🥰</p>
+      <span class="review-role">ลูกค้าประจำ</span>
+      <div class="review-stars">★★★★★</div>
     </div>
   </div>
+
+  <div class="review-card">
+    <img src="assets/images/profile/พลอย.jpg"
+         class="review-avatar"
+         onclick="openImage(this.src)"
+         alt="profile">
+    <div class="review-content">
+      <h4>James</h4>
+      <p>แพ็กเกจดูดี ส่งไว 👍</p>
+      <span class="review-role">ลูกค้าประจำ</span>
+      <div class="review-stars">★★★★☆</div>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <img src="assets/images/profile/เพลง.jpg"
+         class="review-avatar"
+         onclick="openImage(this.src)"
+         alt="profile">
+    <div class="review-content">
+      <h4>May</h4>
+      <p>ราคาดี กลิ่นติดทน 💕</p>
+      <span class="review-role">ลูกค้าประจำ</span>
+      <div class="review-stars">★★★★★</div>
+    </div>
+  </div>
+
+<div class="review-card">
+    <img src="assets/images/profile/เบลล่า.jpg"
+         class="review-avatar"
+         onclick="openImage(this.src)"
+         alt="profile">
+    <div class="review-content">
+      <h4>เบลล่า พอร์ช</h4>
+      <p> เสื้อผ้าคุณภาพดี ใส่สบาย</p>
+      <span class="review-role">ลูกค้าประจำ</span>
+      <div class="review-stars">★★★★★</div>
+    </div>
+  </div>
+
+  <div class="review-card">
+    <img src="assets/images/profile/เค.jpg"
+         class="review-avatar"
+         onclick="openImage(this.src)"
+         alt="profile">
+    <div class="review-content">
+      <h4>เคร่า งับ</h4>
+      <p>ส่งไว แอดมินตอบเร็วมากค่าา<_> </p>
+      <span class="review-role">ลูกค้าใหม่</span>
+      <div class="review-stars">★★★★☆</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- IMAGE MODAL -->
+<div id="imgModal" class="img-modal" onclick="closeImage()">
+  <span class="close">&times;</span>
+  <img id="modalImg">
+</div>
 </section>
 
 <div id="footer"></div>
-
 <script src="assets/js/main.js"></script>
+<script src="assets/js/review.js"></script>
 </body>
 </html>
