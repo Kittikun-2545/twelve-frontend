@@ -93,6 +93,32 @@
         </div>
       </div>
 
+       <div class="row-card">
+        <img src="assets/images/products/x600.jpg">
+        <p>Fresh ral</p>
+        <span>฿1,390</span>
+        <div class="product-action">
+          <button onclick="openModal(
+            'assets/images/products/x600.jpg',
+            'Fresh ral',
+            '฿1,590'
+          )">ดูสินค้า</button>
+        </div>
+      </div>
+
+       <div class="row-card">
+        <img src="assets/images/products/x600.jpg">
+        <p>Fresh ral</p>
+        <span>฿1,390</span>
+        <div class="product-action">
+          <button onclick="openModal(
+            'assets/images/products/x600.jpg',
+            'Fresh ral',
+            '฿1,590'
+          )">ดูสินค้า</button>
+        </div>
+      </div>
+
     </div>
 
     <button class="row-btn right" onclick="scrollRow('perfume', 1)">›</button>
@@ -108,70 +134,102 @@
     <div class="row-items" id="skin">
 
       <div class="row-card">
-        <img src="assets/images/products/pngtree.jpg">
-        <p>Moisture Cream</p>
-        <span>฿590</span>
+        <img src="assets/images/products/V.png">
+        <p>Violet</p>
+        <span>69</span>
         <div class="product-action">
           <button onclick="openModal(
-            'assets/images/products/pngtree.jpg',
-            'Moisture Cream',
-            '฿590'
+            'assets/images/products/V.png',
+            'Violet',
+            '฿69'
           )">ดูสินค้า</button>
         </div>
       </div>
 
       <div class="row-card">
-        <img src="assets/images/products/1116115-bodycream-220ml.webp">
+        <img src="assets/images/products/Yellow.jpg">
         <p>Glow Serum</p>
-        <span>฿690</span>
+        <span>฿69</span>
         <div class="product-action">
           <button onclick="openModal(
-            'assets/images/products/1116115-bodycream-220ml.webp',
+            'assets/images/products/Yellow.jpg',
             'Glow Serum',
-            '฿690'
+            '฿69'
           )">ดูสินค้า</button>
         </div>
       </div>
 
       <div class="row-card">
-        <img src="assets/images/products/ato.jpg">
-        <p>Bright Toner</p>
-        <span>฿450</span>
+        <img src="assets/images/products/G.jpg">
+        <p>natural green</p>
+        <span>฿45</span>
         <div class="product-action">
           <button onclick="openModal(
-            'assets/images/products/ato.jpg',
+            'assets/images/products/G.jpg',
             'Bright Toner',
-            '฿450'
+            '฿45'
           )">ดูสินค้า</button>
         </div>
       </div>
 
       <div class="row-card">
-        <img src="assets/images/products/หน้าG.jpg">
-        <p>Soft Cleanser</p>
-        <span>฿390</span>
+        <img src="assets/images/products/P.jpg">
+        <p>Pink</p>
+        <span>฿59</span>
         <div class="product-action">
           <button onclick="openModal(
-            'assets/images/products/หน้าG.jpg',
+            'assets/images/products/P.jpg',
             'Soft Cleanser',
-            '฿390'
+            '฿59'
           )">ดูสินค้า</button>
         </div>
       </div>
 
       <div class="row-card">
-        <img src="assets/images/products/300x300.avif">
-        <p> Cleanser</p>
-        <span>฿390</span>
+        <img src="assets/images/products/B.jpg">
+        <p> Blue</p>
+        <span>฿39</span>
         <div class="product-action">
           <button onclick="openModal(
-            'assets/images/products/300x300.avif',
+            'assets/images/products/B.jpg',
             ' Cleanser',
-            '฿390'
+            '฿39'
           )">ดูสินค้า</button>
         </div>
       </div>
 
+      <div class="row-card">
+        <img src="assets/images/products/W.jpg">
+        <p> White</p>
+        <span>฿90</span>
+        <div class="product-action">
+          <button onclick="openModal(
+            'assets/images/products/W.jpg',
+            ' Cleanser',
+            '฿90'
+          )">ดูสินค้า</button>
+        </div>
+      </div>
+
+      <div class="row-card">
+        <img src="assets/images/products/R.jpg">
+        <p> Red</p>
+        <span>฿30</span>
+        <div class="product-action">
+          <button onclick="openModal(
+            'assets/images/products/R.jpg',
+            ' Cleanser',
+            '฿30'
+          )">ดูสินค้า</button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <button class="row-btn right" onclick="scrollRow('skin', 1)">›</button>
+  </div>
+</section>
     </div>
 
     <button class="row-btn right" onclick="scrollRow('skin', 1)">›</button>
@@ -181,5 +239,28 @@
 <div id="footer"></div>
 
 <script src="assets/js/main.js"></script>
+<script>
+function autoScrollRow(rowId) {
+  const row = document.getElementById(rowId);
+  let direction = 1;
+
+  setInterval(() => {
+    // ชนขอบขวา หรือ ขอบซ้าย → กลับทิศ
+    if (
+      row.scrollLeft + row.clientWidth >= row.scrollWidth ||
+      row.scrollLeft <= 0
+    ) {
+      direction *= -1;
+    }
+
+    row.scrollLeft += direction;
+  }, 20);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  autoScrollRow("perfume"); // ← id ของ row-items
+});
+</script>
+
 </body>
 </html>
