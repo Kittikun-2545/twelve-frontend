@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>TWELVE | แชมพู</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<section class="section">
+  <h2>🧼แชมพู</h2>
+
+  <div class="row">
+    <button class="row-btn left" onclick="scrollRow('shampoo', -1)">‹</button>
+
+    <div class="row-items" id="perfume">
+
+      <!-- PRODUCT CARD -->
+      <div class="row-card">
+        <img src="assets/images/products/pexels-sarah-chai-7262993.jpg" alt="shampoo">
+        <p>แชมพูขวดเขียว</p>
+        <span>฿119</span>
+
+        <div class="product-action">
+          <button onclick="openModal(
+            'assets/images/products/pexels-sarah-chai-7262993.jpg',
+            'ชื่อสินค้า',
+            '฿119'
+          )">ดูสินค้า</button>
+        </div>
+      </div>
+
+      <div class="row-card">
+        <img src="assets/images/products/pexels-karola-g-4239034.jpg" alt="shampoo">
+        <p>ครีมนวด</p>
+        <span>฿89</span>
+
+        <div class="product-action">
+          <button onclick="openModal(
+            'assets/images/products/pexels-karola-g-4239034.jpg',
+            'ชื่อสินค้า',
+            '฿89'
+          )">ดูสินค้า</button>
+        </div>
+      </div>
+
+      <div class="row-card">
+        <img src="assets/images/products/pexels-ivan-s-7161575.jpg" alt="shampoo">
+        <p>แชมพูสมุนไพร</p>
+        <span>฿129</span>
+
+        <div class="product-action">
+          <button onclick="openModal(
+            'assets/images/products/pexels-ivan-s-7161575.jpg.jpg',
+            'ชื่อสินค้า',
+            '฿129'
+          )">ดูสินค้า</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
